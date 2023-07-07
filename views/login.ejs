@@ -1,0 +1,19 @@
+<!-- correo -->
+<!-- contraseña -->
+<h1>Login</h1>
+
+<% if(errors) { %>
+<ul>
+  <% errors.forEach(error => {%>
+  <li><%= error.msg %></li>
+  <% }); %>
+</ul>
+<% } %>
+
+<form action="/login" method="POST">
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email" placeholder="Email" />
+  <label for="password">Password</label>
+  <input type="password" name="password" placeholder="Password" />
+  <button type="submit">Enviar</button>
+</form>
